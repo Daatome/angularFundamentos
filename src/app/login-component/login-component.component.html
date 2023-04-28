@@ -1,0 +1,15 @@
+<div class="container-xl">
+    <form action="" class="row border m-5 justify-content-center" #miFormulario="ngForm"  (ngSubmit)="login(miFormulario)">
+        <h2 class="text-center">Login</h2>
+        <div class="col-md-5 mt-3">
+            <input type="email" name="email" placeholder="Email" class="form-control" ngModel>
+            
+        </div>
+        <div class="col-md-5 mt-3">
+            <input type="password" name="password" placeholder="password" class="form-control" ngModel>
+        </div>
+        <div class=" col-md-5">
+            <button type="submit" class="btn btn-primary my-3">Iniciar sesion</button>
+        </div>
+    </form>
+</div>

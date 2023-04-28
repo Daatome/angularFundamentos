@@ -1,0 +1,23 @@
+<div class="container-xl">
+    <h1 class="text-success text-center">Registro de empleados</h1>
+
+    <form action="" class="form">
+        <label class="form-label" for="name">Nombre:</label>
+        <input class="form-control" type="text" name="name" #name  [(ngModel)]="nombre" >
+        <label class="form-label" for="apellidos">Apellidos:</label>
+        <input class="form-control" type="text" name="apellidos" #lastname [(ngModel)]="apellido">
+        <label class="form-label" for="cargo">Cargo:</label>
+        <input class="form-control" type="text" name="cargo" #charge [(ngModel)]="cargo">
+        <label class="form-label" for="salario" >Salario:</label>
+        <input class="form-control" type="number" name="salario" #salary [(ngModel)]="salario">
+        <div *ngIf="accion==1; else accionDos">       
+            <button type="button"class="btn btn-primary mt-3" (click)="actualizaUsuario()">actualizar Usuario</button>    
+        </div>
+        <ng-template #accionDos>
+            <button type="button" class="btn btn-danger mt-3" (click)="eliminaUsuario()" >Eliminar Usuario</button>    
+        </ng-template>
+        
+    </form>
+
+    <a href="" class="btn btn-success mt-5 d-block ">Ir al inicio</a>
+</div>

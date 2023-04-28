@@ -1,0 +1,21 @@
+<div class="container-xl">
+    <h1 class="text-success text-center">Registro de empleados</h1>
+
+    <form action="" class="form">
+        <label class="form-label" for="name">Nombre:</label>
+        <input class="form-control" type="text" name="name" #name>
+        <label class="form-label" for="apellidos">Apellidos:</label>
+        <input class="form-control" type="text" name="apellidos" #lastname>
+        <label class="form-label" for="cargo">Cargo:</label>
+        <input class="form-control" type="text" name="cargo" #charge>
+        <label class="form-label" for="salario">Salario:</label>
+        <input class="form-control" type="number" name="salario" #salary>
+    
+        <button type="submit" class="btn btn-primary mt-3" (click)="registraUsuario(name.value,lastname.value,charge.value,salary.value)">Registrar</button>    
+    </form>
+    <br><br><!--asi se van a mandar los datos al hijo -->
+    
+    <app-empleado-hijo *ngFor="let empleado of empleados index as indice; ;" [empleadoDeLista]="empleado" [indicepasado]="indice"> 
+    </app-empleado-hijo>
+    
+</div>
